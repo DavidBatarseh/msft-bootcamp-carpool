@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={car} className="App-logo" alt="logo" />
+          <img src={car} alt="logo" />
           <h1 className="App-title">Find your ride!</h1>
         </header>
         <p className="App-intro">{this.state.response}</p>
