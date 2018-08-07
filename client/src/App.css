@@ -26,6 +26,22 @@
   font-size: large;
 }
 
+
+#div1 {
+  display: inline-block;
+  width:200px;
+  height:90px;
+}
+#div2 {
+  display: inline-block;
+  width:200px;
+  height:90px;
+}
+
+ul {
+  list-style-type: none;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

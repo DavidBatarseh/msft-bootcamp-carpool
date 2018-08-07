@@ -29,10 +29,33 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={car} className="App-logo-custom" alt="logo" />
-          <h1 className="App-title">Find your ride!</h1>
+        <h3> Team </h3>
+        <div id = "div1" class="container" styles="list-style-type: none;">
+            <ul>
+              <li>Danny Batarseh</li>
+              <li>Zayaan Ali</li>
+              <li>David Batarseh</li>
+              <li>Tommy Lu</li>
+            </ul>
+        </div>
+        <div id = "div2" class="container" styles="list-style-type: none;">
+            <ul>
+            <li>Eric Yoon</li>
+            <li>Weifeng Li</li>
+            <li>Sunny Lee</li>
+            <li>.</li>
+          </ul>
+        </div>
         </header>
-        <p className="App-intro">{this.state.response}</p>
+        <div>
+          <img src={car} class="container"  className="App-logo-custom" alt="logo" />
+        </div>
+        <div>
+          <h1 className="App-title" class="container" >Find your ride!</h1>
+        </div>
+        <div>
+          <p className="App-intro">{this.state.response}</p>
+        </div>
       </div>
     );
   }
