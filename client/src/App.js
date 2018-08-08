@@ -65,7 +65,7 @@ class App extends Component {
           </div>
         </header>
         <div>
-          <img src={car} className="container" className="App-logo-custom" alt="logo" />
+          <img src={car} className="App-logo-custom" alt="logo" />
         </div>
 
         <div>
@@ -74,7 +74,7 @@ class App extends Component {
         </div>
 
         <div>
-          <h1 className="App-title" className="container" >Driving?</h1>
+          <h1 className="App-title">Driving?</h1>
         </div>
 
         <form onSubmit={this.handleSubmit}>
