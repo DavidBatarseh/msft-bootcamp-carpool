@@ -5,43 +5,27 @@ import car from './Aventador-Transparent-Background.png';
 
 import './App.css';
 
-class NameForm extends React.Component {
+
+class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = { response: '', value: '' };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    //alert('A name was submitted: ' + this.state.value);
+
+
     event.preventDefault();
   }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
-}
-
-
-
-class App extends Component {
-  state = {
-    response: ''
-  };
 
   componentDidMount() {
     this.callApi()
@@ -62,35 +46,51 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <h3> Team </h3>
-        <div id = "div1" class="container" styles="list-style-type: none;">
+          <h3> Team </h3>
+          <div id="div1" className="container" styles="list-style-type: none;">
             <ul>
               <li>Danny Batarseh</li>
               <li>Zayaan Ali</li>
               <li>David Batarseh</li>
               <li>Tommy Lu</li>
             </ul>
-        </div>
-        <div id = "div2" class="container" styles="list-style-type: none;">
+          </div>
+          <div id="div2" className="container" styles="list-style-type: none;">
             <ul>
-            <li>Eric Yoon</li>
-            <li>Weifeng Li</li>
-            <li>Sunny Lee</li>
-            <li>.</li>
-          </ul>
-        </div>
+              <li>Eric Yoon</li>
+              <li>Weifeng Li</li>
+              <li>Sunny Lee</li>
+              <li>.</li>
+            </ul>
+          </div>
         </header>
         <div>
-          <img src={car} class="container"  className="App-logo-custom" alt="logo" />
+          <img src={car} className="container" className="App-logo-custom" alt="logo" />
         </div>
+
         <div>
-          <h1 className="App-title" class="container" >Find your ride!</h1>
-        </div>
-        <div>
+          <h1> Upcoming Rides </h1>
           <p className="App-intro">{this.state.response}</p>
         </div>
-        <Nameform />
+
+        <div>
+          <h1 className="App-title" className="container" >Driving?</h1>
+        </div>
+
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Ride:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+
+
+
+
+
       </div>
+
     );
   }
 }
